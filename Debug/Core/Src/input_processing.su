@@ -1,0 +1,2 @@
+input_processing.c:13:6:initButonState	16	static
+input_processing.c:19:6:fsm_for_input_processing	16	static
