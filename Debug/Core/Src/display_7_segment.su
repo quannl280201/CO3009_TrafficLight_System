@@ -1,0 +1,2 @@
+display_7_segment.c:11:6:displaySegment	16	static
+display_7_segment.c:82:6:updateSegment	16	static

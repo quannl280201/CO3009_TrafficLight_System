@@ -58,7 +58,7 @@ static void MX_TIM2_Init(void);
 
 /* Private user code ---------------------------------------------------------*/
 /* USER CODE BEGIN 0 */
-
+uint8_t led_index = 0;
 /* USER CODE END 0 */
 
 /**
@@ -92,7 +92,6 @@ int main(void) {
 	/* USER CODE BEGIN 2 */
 	HAL_TIM_Base_Start_IT(&htim2);
 	setTimer(0, 1000);
-
 	/* USER CODE END 2 */
 
 	/* Infinite loop */
@@ -101,6 +100,8 @@ int main(void) {
 		/* USER CODE END WHILE */
 		if(timer_array[0].flag){
 			HAL_GPIO_TogglePin(SYSTEM_LED_GPIO_Port, SYSTEM_LED_Pin);
+			updateSegment(led_index++);
+			if(led_index > 1) led_index = 0;
 			setTimer(0, 1000);
 		}
 		/* USER CODE BEGIN 3 */

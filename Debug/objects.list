@@ -1,4 +1,5 @@
 "./Core/Src/SoftwareTimer.o"
+"./Core/Src/display_7_segment.o"
 "./Core/Src/input_processing.o"
 "./Core/Src/input_reading.o"
 "./Core/Src/main.o"
